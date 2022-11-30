@@ -1,14 +1,17 @@
 import React from 'react';
+import { Nav, NavbarContainer } from "./Navbar.elements";
 
-const Nav = styled.nav`
-    
-`
+// eslint-disable-next-line no-undef
+
 
 const Navbar = () => {
     return (
-        <nav>
+        <Nav>
+            <NavbarContainer>
 
-        </nav>
+            </NavbarContainer>
+
+        </Nav>
     );
 };
 
