@@ -1,13 +1,11 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 // import {FaQuora} from 'react-icons/fa';
-// import quizIcon from '../../media/quizIcon.svg';
-import {ReactComponent as Logo} from '../../media/quizIcon.svg';
-import {Link} from 'react-router-dom';
-import {Container} from '../../globalStyles';
-// import {ReactComponent} from '*.svg';
+import { Link } from "react-router-dom";
+import { ReactComponent as Logo } from "../../media/quizIcon.svg";
+import { Container } from "../../globalStyles";
 
 export const Nav = styled.nav`
-  background: #101522;
+  background: paleturquoise;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -27,7 +25,9 @@ export const NavbarContainer = styled(Container)`
 `;
 
 export const NavLogo = styled(Link)`
-  color: #fff;
+  font-family: "Sitka Banner", sans-serif;
+  font-weight: bold;
+  color: blue;
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
@@ -67,7 +67,7 @@ export const NavMenu = styled.ul`
     height: 90vh;
     position: absolute;
     top: 80px;
-    left: ${({click}) => (click ? 0 : '-100%')};
+    left: ${({ click }) => (click ? 0 : "-100%")};
     opacity: 1;
     transition: all 0.5s ease;
     background: #101522;
@@ -92,7 +92,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(Link)`
-  color: #fff;
+  color: darkgreen;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -110,5 +110,26 @@ export const NavLinks = styled(Link)`
       transition: all 0.3s ease;
     }
   }
+`;
 
+export const NavItemBtn = styled.li`
+  @media screen and (max-width: 960px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+  }
+`;
+
+export const NavBtnLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 8px 16px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
 `;
