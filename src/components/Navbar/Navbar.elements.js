@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import {FaQuora} from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../../media/quizIcon.svg";
 import { Container } from "../../globalStyles";
