@@ -57,18 +57,28 @@ function Navbar() {
       <NavItem>
        <NavLinks to="/student">Student</NavLinks>
       </NavItem>
-      <NavItem>
-       <NavLinks to="/teacher">Teacher</NavLinks>
-      </NavItem>
       <NavItemBtn>
        {button ? (
-        <NavBtnLink to="/sign-in">
-         <Button primary>Sign in</Button>
+        <NavBtnLink to="/login">
+         <Button fontBig primary>Teacher Login</Button>
         </NavBtnLink>
        ) : (
-        <NavBtnLink to="/sign-in">
+        <NavBtnLink to="/login">
          <Button fontBig primary>
-          Sign in
+          Teacher Login
+         </Button>
+        </NavBtnLink>
+       )}
+      </NavItemBtn>
+      <NavItemBtn>
+       {button ? (
+        <NavBtnLink to="/register">
+         <Button fontBig primary>Teacher Register</Button>
+        </NavBtnLink>
+       ) : (
+        <NavBtnLink to="/register">
+         <Button fontBig primary>
+          Teacher Register
          </Button>
         </NavBtnLink>
        )}

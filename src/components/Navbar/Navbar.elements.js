@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { ReactComponent as Logo } from "../../media/quizIcon.svg";
-import { Container } from "../../globalStyles";
+import {Link} from "react-router-dom";
+import {ReactComponent as Logo} from "../../media/quizIcon.svg";
+import {Container} from "../../globalStyles";
 
 export const Nav = styled.nav`
   background: paleturquoise;
@@ -30,13 +30,17 @@ export const NavLogo = styled(Link)`
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 2.5rem;
   display: flex;
   align-items: center;
 `;
 
 export const NavIcon = styled(Logo)`
-  width: 8%;
+  width: ${({width}) => width || '70px'};
+
+  & path {
+    fill: ${({color}) => color || 'blue'}
+  }
 `;
 
 export const MobileIcon = styled.div`
@@ -66,7 +70,7 @@ export const NavMenu = styled.ul`
     height: 90vh;
     position: absolute;
     top: 80px;
-    left: ${({ click }) => (click ? 0 : "-100%")};
+    left: ${({click}) => (click ? 0 : "-100%")};
     opacity: 1;
     transition: all 0.5s ease;
     background: #101522;

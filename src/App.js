@@ -4,9 +4,9 @@ import GlobalStyle from "./globalStyles";
 import Home from './pages/HomePage/Home';
 import {Navbar, Footer} from "./components";
 import Student from './pages/Student/Student';
-import Teacher from './pages/Teacher/Teacher';
-import SignIn from './pages/SignIn/SignIn';
 import ScrollToTop from './components/ScrollToTop';
+import Register from './pages/Register/Register';
+import Login from './pages/Login/Login';
 
 function App() {
  return (
@@ -18,8 +18,8 @@ function App() {
    <Routes>
     <Route path='/' element={<Home/>}/>
     <Route path='/student' element={<Student/>}/>
-    <Route path='/teacher' element={<Teacher/>}/>
-    <Route path='/sign-in' element={<SignIn/>}/>
+    <Route path='/login' element={<Login/>}/>
+    <Route path='/register' element={<Register/>}/>
    </Routes>
    <Footer/>
   </Router>
