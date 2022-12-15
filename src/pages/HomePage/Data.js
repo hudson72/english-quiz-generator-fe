@@ -1,0 +1,15 @@
+export const homeObjOne = {
+ lightBg: false,
+ imgStart: '',
+ lightTopLine: true,
+ lightTextDesc: true,
+ buttonLabel: 'Get Started',
+ description: 'Share english quizzes with your students!',
+ headline: 'English Quiz Generator ',
+ lightText: true,
+ primary: true,
+ topLine: 'Create, share and get quality material for your english lessons!',
+ img: require('../../media/teacher.svg'),
+ alt: 'Image',
+ start: '',
+};

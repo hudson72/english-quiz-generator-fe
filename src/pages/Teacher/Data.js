@@ -1,0 +1,63 @@
+// export const homeObjOne = {
+//  lightBg: false,
+//  imgStart: '',
+//  lightTopLine: true,
+//  lightTextDesc: true,
+//  buttonLabel: 'Get Started',
+//  description: 'Share english quizzes with your students!',
+//  headline: 'English Quiz Generator ',
+//  lightText: true,
+//  primary: true,
+//  topLine: 'Create, share and get quality material for your english lessons!',
+//  img: require('../../media/teacher.svg'),
+//  alt: 'Image',
+//  start: '',
+// };
+//
+// export const homeObjTwo = {
+//  lightBg: true,
+//  imgStart: 'start',
+//  lightTopLine: false,
+//  lightTextDesc: false,
+//  buttonLabel: 'Get Started',
+//  description: 'Share english quizzes with your students!',
+//  headline: 'English Quiz Generator ',
+//  lightText: false,
+//  primary: false,
+//  topLine: 'Create, share and get quality material for your english lessons!',
+//  img: require('../../media/teacher.svg'),
+//  alt: 'Image',
+//  start: 'true',
+// };
+
+export const homeObjThree = {
+ lightBg: false,
+ imgStart: '',
+ lightTopLine: true,
+ lightTextDesc: true,
+ buttonLabel: 'Get Started',
+ description: 'Share english quizzes with your students!',
+ headline: 'English Quiz Generator ',
+ lightText: true,
+ primary: true,
+ topLine: 'Create, share and get quality material for your english lessons!',
+ img: require('../../media/register.svg'),
+ alt: 'Image',
+ start: '',
+};
+
+// export const homeObjFour = {
+//  lightBg: false,
+//  imgStart: 'start',
+//  lightTopLine: true,
+//  lightTextDesc: true,
+//  buttonLabel: 'Get Started',
+//  description: 'Share english quizzes with your students!',
+//  headline: 'English Quiz Generator ',
+//  lightText: true,
+//  primary: false,
+//  topLine: 'Create, share and get quality material for your english lessons!',
+//  img: require('../../media/teacher.svg'),
+//  alt: 'Image',
+//  start: 'true',
+// };
