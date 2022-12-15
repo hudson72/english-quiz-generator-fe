@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import GlobalStyle from "./globalStyles";
 import Home from './pages/HomePage/Home';
@@ -9,6 +9,16 @@ import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
 
 function App() {
+ const [quiz, setQuiz] = useState([]);
+
+ useEffect(() => {
+  async function fetchAll() {
+   const res = await QuizApi.getAll();
+
+   setQuiz(res);
+  }
+ }, []);
+
  return (
   // eslint-disable-next-line react/jsx-filename-extension
   <Router>
