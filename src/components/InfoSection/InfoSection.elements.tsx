@@ -1,12 +1,13 @@
-import styled from "styled-components";
+import styled, {createGlobalStyle, css, InfoSectionProps} from "styled-components";
+import {Props} from "../../types/Props";
 
-export const InfoSec = styled.div`
+export const InfoSec = styled.div<Props>`
   color: #fff;
   padding: 160px 0;
   background: ${({lightBg}) => (lightBg ? "#fff" : "#101522")};
 `;
 
-export const InfoRow = styled.div`
+export const InfoRow = styled.div<Props>`
   margin: 0 -15px -15px -15px;
   align-items: center;
   display: flex;
@@ -40,7 +41,7 @@ export const TextWrapper = styled.div`
   }
 `;
 
-export const TopLine = styled.div`
+export const TopLine = styled.div<Props>`
   color: ${({lightTopLine}) => (lightTopLine ? '#a9b3c1' : '#4B59F7')};
   font-size: 18px;
   line-height: 16px;
@@ -48,14 +49,14 @@ export const TopLine = styled.div`
   margin-bottom: 16px;
 `;
 
-export const Heading = styled.div`
+export const Heading = styled.div<Props>`
   margin-bottom: 24px;
   font-size: 48px;
   line-height: 1.1;
   color: ${({lightText}) => (lightText ? '#f7f8fa' : '#1c2237')}
 `;
 
-export const Subtitle = styled.div`
+export const Subtitle = styled.div<Props>`
   max-width: 440px;
   margin-bottom: 35px;
   font-size: 18px;
@@ -63,7 +64,7 @@ export const Subtitle = styled.div`
   color: ${({lightTextDesc}) => (lightTextDesc ? '#a9b3c1' : '#1c2237')}
 `;
 
-export const ImgWrapper = styled.div`
+export const ImgWrapper = styled.div<Props>`
   max-width: 555px;
   display: flex;
   justify-content: ${({start}) => (start ? 'flex-start' : 'flex-end')};
