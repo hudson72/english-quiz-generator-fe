@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Link} from "react-router-dom";
 import {ReactComponent as Logo} from "../../media/quizIcon.svg";
 import {Container} from "../../globalStyles";
+import {NavbarProps} from "../../types/Props";
 
 export const Nav = styled.nav`
   background: paleturquoise;
@@ -57,7 +58,7 @@ export const MobileIcon = styled.div`
   }
 `;
 
-export const NavMenu = styled.ul`
+export const NavMenu = styled.ul<NavbarProps>`
   display: flex;
   align-items: center;
   list-style: none;

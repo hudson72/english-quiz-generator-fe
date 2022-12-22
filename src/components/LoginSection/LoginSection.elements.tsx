@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const LoginContainer = styled.div`
   background-color: #101522;
-  //background: paleturquoise;
   padding: 4rem 0 2rem 0;
   display: flex;
   flex-direction: column;
@@ -19,7 +18,6 @@ export const LoginSubscription = styled.section`
   margin-bottom: 24px;
   padding: 24px;
   color: #fff;
-  //color: black;
 `;
 
 export const LoginSubHeading = styled.p`
