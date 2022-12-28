@@ -43,7 +43,7 @@ const InfoSectionStudent: React.FC<Props> = ({
                                 <Heading lightText={lightText}>{headline}</Heading>
                                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
                                 <Link to='/register'>
-                                    <Button big fontBig primary={primary}>
+                                    <Button onClick={handleClick} big fontBig primary={primary}>
                                         {buttonLabel}
                                     </Button>
                                 </Link>

@@ -2,7 +2,7 @@ import React from "react";
 import {homeObjTwo} from './Data';
 import InfoSectionStudent from "../../components/InfoSectionStudent/InfoSectionStudent";
 
-const Students = () => {
+const QuizzesList = () => {
     return (
         <>
             <InfoSectionStudent {...homeObjTwo}/>
@@ -10,4 +10,4 @@ const Students = () => {
     )
 };
 
-export default Students;
+export default QuizzesList;
