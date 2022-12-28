@@ -51,7 +51,7 @@ const InfoSectionStudent: React.FC<Props> = ({
                         </InfoColumn>
                         <InfoColumn>
                             <ImgWrapper start={start}>
-                                <Img src={require('../../media/undraw_quiz.svg').default} alt={alt}/>
+                                <Img src={require('../../media/quizStudent.svg').default} alt={alt}/>
                             </ImgWrapper>
                         </InfoColumn>
                     </InfoRow>

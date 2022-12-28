@@ -8,7 +8,7 @@ export const homeObjTwo = {
     lightText: false,
     primary: false,
     topLine: 'Put your knowledge of english to the test!',
-    img: require('../../media/undraw_quiz.svg'),
+    img: require('../../media/quizStudent.svg'),
     alt: 'Image',
     start: 'true',
 };
