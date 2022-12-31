@@ -1,11 +1,11 @@
 import React from "react";
 import {homeObjTwo} from './Data';
-import InfoSectionStudent from "../../components/InfoSectionStudent/InfoSectionStudent";
+import QuizzesSection from "../../components/QuizzesSection/QuizzesSection";
 
 const QuizzesList = () => {
     return (
         <>
-            <InfoSectionStudent {...homeObjTwo}/>
+            <QuizzesSection/>
         </>
     )
 };

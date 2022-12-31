@@ -9,6 +9,7 @@ import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
 import {QuizApi} from './api/quiz.api';
 import {QuizDto} from './api/dto/quiz.dto';
+import QuizzesList from "./pages/QuizzesList/QuizzesList";
 
 function App() {
     const [quizzes, setQuizzes] = useState<QuizDto[]>([]);
@@ -26,15 +27,6 @@ function App() {
     return (
         // eslint-disable-next-line react/jsx-filename-extension
         <Router>
-            <div className="App">
-                <ul>
-                    {
-                        quizzes.map(quiz => {
-                            return <li key={quiz.id}>{quiz.quizName}</li>
-                        })
-                    }
-                </ul>
-            </div>
             <GlobalStyle/>
             <ScrollToTop/>
             <Navbar/>
@@ -43,6 +35,7 @@ function App() {
                 <Route path='/student' element={<Student/>}/>
                 <Route path='/login' element={<Login/>}/>
                 <Route path='/register' element={<Register/>}/>
+                <Route path='/quizzes-list' element={<QuizzesList/>}/>
             </Routes>
             <Footer/>
         </Router>

@@ -42,8 +42,8 @@ const InfoSectionStudent: React.FC<Props> = ({
                                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                                 <Heading lightText={lightText}>{headline}</Heading>
                                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                                <Link to='/register'>
-                                    <Button onClick={handleClick} big fontBig primary={primary}>
+                                <Link to='/quizzes-list'>
+                                    <Button big fontBig primary={primary}>
                                         {buttonLabel}
                                     </Button>
                                 </Link>
