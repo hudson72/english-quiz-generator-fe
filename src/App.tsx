@@ -10,6 +10,7 @@ import Login from './pages/Login/Login';
 import {QuizApi} from './api/quiz.api';
 import {QuizDto} from './api/dto/quiz.dto';
 import QuizzesList from "./pages/QuizzesList/QuizzesList";
+import Quizzes from "./pages/Quizzes/Quizzes";
 
 function App() {
     const [quizzes, setQuizzes] = useState<QuizDto[]>([]);
@@ -36,6 +37,7 @@ function App() {
                 <Route path='/login' element={<Login/>}/>
                 <Route path='/register' element={<Register/>}/>
                 <Route path='/quizzes-list' element={<QuizzesList/>}/>
+                <Route path='/quizzes' element={<Quizzes/>}/>
             </Routes>
             <Footer/>
         </Router>
