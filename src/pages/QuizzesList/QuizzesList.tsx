@@ -1,11 +1,11 @@
 import React from "react";
 import {homeObjTwo} from './Data';
-import QuizzesSection from "../../components/QuizzesSection/QuizzesSection";
+import QuizzesListSection from "../../components/QuizzesListSection/QuizzesListSection";
 
 const QuizzesList = () => {
     return (
         <>
-            <QuizzesSection/>
+            <QuizzesListSection/>
         </>
     )
 };

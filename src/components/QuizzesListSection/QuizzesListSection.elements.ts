@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 import {Link} from "react-router-dom";
 
-export const QuizzesSectionContainer = styled.div`
+export const QuizzesListSectionContainer = styled.div`
   background-color: #101522;
   padding: 4rem 0 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 `;
 
 // export const LoginSubscription = styled.section`
@@ -22,13 +21,13 @@ export const QuizzesSectionContainer = styled.div`
 //   color: #fff;
 // `;
 
-export const QuizzesSectionSubHeading = styled.p`
+export const QuizzesListSectionSubHeading = styled.p`
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-bottom: 24px;
   font-size: 24px;
 `;
 
-export const QuizzesSectionSubText = styled.p`
+export const QuizzesListSectionSubText = styled.p`
   margin-bottom: 24px;
   font-size: 20px;
 `;
@@ -62,7 +61,7 @@ export const QuizzesSectionSubText = styled.p`
 //   }
 // `;
 
-export const QuizzesSectionLinksContainer = styled.div`
+export const QuizzesListSectionLinksContainer = styled.div`
   width: 100%;
   max-width: 1000px;
   display: flex;
@@ -73,15 +72,16 @@ export const QuizzesSectionLinksContainer = styled.div`
   };
 `;
 
-export const QuizzesSectionLinksWrapper = styled.div`
+export const QuizzesListSectionLinksWrapper = styled.div`
   display: flex;
+  flex-wrap: nowrap;
 
   @media screen and (max-width: 820px) {
     flex-direction: column;
   };
 `;
 
-export const QuizzesSectionLinksItems = styled.div`
+export const QuizzesListSectionLinksItems = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -90,7 +90,6 @@ export const QuizzesSectionLinksItems = styled.div`
   width: 160px;
   box-sizing: border-box;
   color: #fff;
-  //color: black;
 
   @media screen and (max-width: 420px) {
     margin: 0;
@@ -99,18 +98,17 @@ export const QuizzesSectionLinksItems = styled.div`
   };
 `;
 
-export const QuizzesSectionLinkTitle = styled.h2`
+export const QuizzesListSectionLinkTitle = styled.h2`
   margin-bottom: 16px;
 `;
 
-export const QuizzesSectionLink = styled(Link)`
+export const QuizzesListSectionLink = styled(Link)`
   color: #fff;
-  //color: black;
   text-decoration: none;
   margin-bottom: 0.5rem;
 
   &:hover {
-    color: #0467fb;
+    color: deepskyblue;
     transition: 0.3s ease-out;
   }
 ;
