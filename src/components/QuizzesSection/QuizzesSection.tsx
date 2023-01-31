@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {QuizDto} from "../../api/dto/quiz.dto";
+import {QuestionDto} from "../../api/dto/questionDto";
 import {QuizApi} from "../../api/quiz.api";
 import {
     QuizzesSectionContainer, QuizzesSectionLink,
@@ -10,7 +10,7 @@ import {
 } from "./QuizzesSection.elements";
 
 function QuizzesSection(): JSX.Element {
-    const [quizzes, setQuizzes] = useState<QuizDto[]>([]);
+    const [quizzes, setQuizzes] = useState<QuestionDto[]>([]);
 
     useEffect(() => {
         async function fetchOne() {
@@ -32,11 +32,7 @@ function QuizzesSection(): JSX.Element {
                                 English!</QuizzesSectionLinkTitle>
                             <ul>
                                 {
-                                    // quizzes.find(quiz => {
-                                    //     return <QuizzesSectionLink to='/quizzes'>
-                                    //         <li key={quiz.id}>{quiz.quizName}</li>
-                                    //     </QuizzesSectionLink>
-                                    // })
+                                    <p>oooopsi</p>
                                 }
                             </ul>
                         </QuizzesSectionLinksItems>
