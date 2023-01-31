@@ -32,11 +32,13 @@ function QuizzesListSection(): JSX.Element {
                                 English!</QuizzesListSectionLinkTitle>
                             <ul>
                                 {
-                                    quizzes.map(quiz => {
-                                        return <QuizzesListSectionLink to='/register'>
-                                            <li key={quiz.id}>{quiz.quizName}</li>
-                                        </QuizzesListSectionLink>
-                                    })
+                                    quizzes
+                                        .sort((a, b) => a.quizName.localeCompare(b.quizName))
+                                        .map(quiz => {
+                                            return <QuizzesListSectionLink to='/quizzes'>
+                                                <li key={quiz.id}>{quiz.quizName}</li>
+                                            </QuizzesListSectionLink>
+                                        })
                                 }
                             </ul>
                         </QuizzesListSectionLinksItems>

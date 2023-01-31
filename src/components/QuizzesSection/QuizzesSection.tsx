@@ -13,13 +13,13 @@ function QuizzesSection(): JSX.Element {
     const [quizzes, setQuizzes] = useState<QuizDto[]>([]);
 
     useEffect(() => {
-        async function fetchAll() {
-            const res = await QuizApi.getAll();
+        async function fetchOne() {
+            const res = await QuizApi.getOne();
 
             setQuizzes(res);
         }
 
-        fetchAll();
+        fetchOne();
     }, []);
 
     return (
@@ -32,11 +32,11 @@ function QuizzesSection(): JSX.Element {
                                 English!</QuizzesSectionLinkTitle>
                             <ul>
                                 {
-                                    quizzes.map(quiz => {
-                                        return <QuizzesSectionLink to='/register'>
-                                            <li key={quiz.id}>{quiz.quizName}</li>
-                                        </QuizzesSectionLink>
-                                    })
+                                    // quizzes.find(quiz => {
+                                    //     return <QuizzesSectionLink to='/quizzes'>
+                                    //         <li key={quiz.id}>{quiz.quizName}</li>
+                                    //     </QuizzesSectionLink>
+                                    // })
                                 }
                             </ul>
                         </QuizzesSectionLinksItems>

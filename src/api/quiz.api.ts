@@ -7,5 +7,13 @@ export class QuizApi {
         })
         const data = await res.json();
         return data;
+    };
+
+    static async getOne(): Promise<QuizDto[]> {
+        const res = await fetch('http://localhost:3000/questions/quiz/category', {
+            method: 'GET'
+        })
+        const data = await res.json();
+        return data;
     }
 }
