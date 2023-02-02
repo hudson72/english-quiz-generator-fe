@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import {QuestionDto} from "../../api/dto/questionDto";
-import {QuizApi} from "../../api/quiz.api";
+import {QuizDto} from "../../api/quiz/dto/quiz.dto";
+import {QuizApi} from "../../api/quiz/quiz.api";
 import {
     QuizzesSectionContainer, QuizzesSectionLink,
     QuizzesSectionLinksContainer,
@@ -10,7 +10,7 @@ import {
 } from "./QuizzesSection.elements";
 
 function QuizzesSection(): JSX.Element {
-    const [quizzes, setQuizzes] = useState<QuestionDto[]>([]);
+    const [quizzes, setQuizzes] = useState<QuizDto[]>([]);
 
     useEffect(() => {
         async function fetchOne() {

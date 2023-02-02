@@ -1,4 +1,4 @@
-export interface QuestionDto {
+export interface QuizDto {
     id: number;
     quizName: string;
     totalQuestions: number;

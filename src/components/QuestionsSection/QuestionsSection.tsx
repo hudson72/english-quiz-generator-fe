@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import {QuestionDto} from "../../api/dto/questionDto";
-import {QuestionApi} from "../../api/question.api";
+import {QuestionDto} from "../../api/question/dto/question.dto";
+import {QuestionApi} from "../../api/question/question.api";
 import {
     QuestionsSectionContainer, QuestionsSectionLink,
     QuestionsSectionLinksContainer,
@@ -31,9 +31,7 @@ function QuestionsSection(): JSX.Element {
                             <QuestionsSectionLinkTitle>Choose a quiz from the list below and start testing your
                                 English!</QuestionsSectionLinkTitle>
                             <ul>
-                                {
-                                    <p>oooopsi</p>
-                                }
+                     
                             </ul>
                         </QuestionsSectionLinksItems>
                     </QuestionsSectionLinksWrapper>

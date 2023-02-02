@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import {QuestionDto} from "../../api/dto/questionDto";
-import {QuizApi} from "../../api/quiz.api";
+import {QuizDto} from "../../api/quiz/dto/quiz.dto";
+import {QuizApi} from "../../api/quiz/quiz.api";
 import {
     QuizzesListSectionContainer, QuizzesListSectionLink,
     QuizzesListSectionLinksContainer,
@@ -10,7 +10,7 @@ import {
 } from "./QuizzesListSection.elements";
 
 function QuizzesListSection(): JSX.Element {
-    const [questions, setQuizzes] = useState<QuestionDto[]>([]);
+    const [quizzes, setQuizzes] = useState<QuizDto[]>([]);
 
     useEffect(() => {
         async function fetchAll() {
@@ -32,7 +32,7 @@ function QuizzesListSection(): JSX.Element {
                                 English!</QuizzesListSectionLinkTitle>
                             <ul>
                                 {
-                                    questions
+                                    quizzes
                                         .sort((a, b) => a.quizName.localeCompare(b.quizName))
                                         .map(quiz => {
                                             return <QuizzesListSectionLink to='/questions'>

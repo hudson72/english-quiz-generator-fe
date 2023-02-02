@@ -1,8 +1,8 @@
-import {QuestionDto} from "./dto/questionDto";
+import {QuestionDto} from "./dto/question.dto";
 
-export class QuizApi {
+export class QuestionApi {
     static async getAll(): Promise<QuestionDto[]> {
-        const res = await fetch('http://localhost:3000/quizzes', {
+        const res = await fetch('http://localhost:3000/questions', {
             method: 'GET'
         })
         const data = await res.json();

@@ -7,13 +7,13 @@ import Student from './pages/Student/Student';
 import ScrollToTop from './components/ScrollToTop';
 import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
-import {QuizApi} from './api/quiz.api';
-import {QuestionDto} from './api/dto/questionDto';
+import {QuizApi} from './api/quiz/quiz.api';
+import {QuizDto} from './api/quiz/dto/quiz.dto';
 import QuizzesList from "./pages/QuizzesList/QuizzesList";
 import Quizzes from "./pages/Quizzes/Quizzes";
 
 function App() {
-    const [questions, setQuizzes] = useState<QuestionDto[]>([]);
+    const [questions, setQuizzes] = useState<QuizDto[]>([]);
 
     useEffect(() => {
         async function fetchAll() {
@@ -36,8 +36,8 @@ function App() {
                 <Route path='/student' element={<Student/>}/>
                 <Route path='/login' element={<Login/>}/>
                 <Route path='/register' element={<Register/>}/>
-                <Route path='/questions-list' element={<QuizzesList/>}/>
-                <Route path='/questions' element={<Quizzes/>}/>
+                <Route path='/quizzes-list' element={<QuizzesList/>}/>
+                <Route path='/quizzes' element={<Quizzes/>}/>
             </Routes>
             <Footer/>
         </Router>

@@ -6,3 +6,4 @@ export {default as RegisterSection} from "./RegisterSection/RegisterSection";
 export {default as LoginSection} from "./LoginSection/LoginSection";
 export {default as QuizzesListSection} from "./QuizzesListSection/QuizzesListSection";
 export {default as QuizzesSection} from "./QuizzesSection/QuizzesSection";
+export {default as QuestionsSection} from "./QuestionsSection/QuestionsSection";
