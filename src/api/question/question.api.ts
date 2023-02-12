@@ -9,10 +9,11 @@ export class QuestionApi {
         return data;
     };
 
-    static async getOne(): Promise<QuestionDto[]> {
-        const res = await fetch('http://localhost:3000/questions/quiz/category', {
-            method: 'GET'
-        })
+    static async getOneQuizQuestions(): Promise<QuestionDto[]> {
+        const res = await fetch('http://localhost:3000/questions/quiz/category/' + new URLSearchParams({
+            questionCategory: 'Articles02'
+            // method: 'GET'
+        }))
         const data = await res.json();
         return data;
     }

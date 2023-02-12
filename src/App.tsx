@@ -11,9 +11,13 @@ import {QuizApi} from './api/quiz/quiz.api';
 import {QuizDto} from './api/quiz/dto/quiz.dto';
 import QuizzesList from "./pages/QuizzesList/QuizzesList";
 import Quizzes from "./pages/Quizzes/Quizzes";
+import {QuestionApi} from './api/question/question.api';
+import {QuestionDto} from "./api/question/dto/question.dto";
+import Questions from "./pages/Questions/Questions";
 
 function App() {
-    const [questions, setQuizzes] = useState<QuizDto[]>([]);
+    const [quizzes, setQuizzes] = useState<QuizDto[]>([]);
+    const [questions, setQuestions] = useState<QuestionDto[]>([]);
 
     useEffect(() => {
         async function fetchAll() {
@@ -22,7 +26,14 @@ function App() {
             setQuizzes(res);
         }
 
+        async function fetchOneQuizQuestions() {
+            const res = await QuestionApi.getOneQuizQuestions();
+
+            setQuestions(res);
+        }
+
         fetchAll();
+        fetchOneQuizQuestions();
     }, []);
 
     return (
@@ -38,6 +49,7 @@ function App() {
                 <Route path='/register' element={<Register/>}/>
                 <Route path='/quizzes-list' element={<QuizzesList/>}/>
                 <Route path='/quizzes' element={<Quizzes/>}/>
+                <Route path='/questions' element={<Questions/>}/>
             </Routes>
             <Footer/>
         </Router>

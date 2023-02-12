@@ -32,7 +32,7 @@ function QuizzesSection(): JSX.Element {
                                 English!</QuizzesSectionLinkTitle>
                             <ul>
                                 {
-                                    <p>oooopsi</p>
+                                    
                                 }
                             </ul>
                         </QuizzesSectionLinksItems>

@@ -10,7 +10,7 @@ export class QuizApi {
     };
 
     static async getOne(): Promise<QuizDto[]> {
-        const res = await fetch('http://localhost:3000/questions/quiz/category', {
+        const res = await fetch('http://localhost:3000/quizzes/:id', {
             method: 'GET'
         })
         const data = await res.json();

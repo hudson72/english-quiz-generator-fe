@@ -13,14 +13,15 @@ function QuestionsSection(): JSX.Element {
     const [questions, setQuestions] = useState<QuestionDto[]>([]);
 
     useEffect(() => {
-        async function fetchOne() {
-            const res = await QuestionApi.getOne();
+        async function fetchOneQuizQuestions() {
+            const res = await QuestionApi.getOneQuizQuestions();
 
             setQuestions(res);
         }
 
-        fetchOne();
+        fetchOneQuizQuestions();
     }, []);
+    console.log(questions);
 
     return (
         <>
@@ -28,10 +29,17 @@ function QuestionsSection(): JSX.Element {
                 <QuestionsSectionLinksContainer>
                     <QuestionsSectionLinksWrapper>
                         <QuestionsSectionLinksItems>
-                            <QuestionsSectionLinkTitle>Choose a quiz from the list below and start testing your
-                                English!</QuestionsSectionLinkTitle>
+                            <QuestionsSectionLinkTitle>Choose one correct option!</QuestionsSectionLinkTitle>
                             <ul>
-                     
+                                {
+                                    questions.map(question => {
+                                        return <div>
+                                            {/* return <QuestionsSectionLink to='/questions'>*/}
+                                            <li key={question.questionCategory}>{question.question}</li>
+                                            {/*  </QuestionsSectionLink>*/}
+                                        </div>
+                                    })
+                                }
                             </ul>
                         </QuestionsSectionLinksItems>
                     </QuestionsSectionLinksWrapper>

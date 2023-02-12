@@ -21,7 +21,7 @@ function QuizzesListSection(): JSX.Element {
 
         fetchAll();
     }, []);
-
+    console.log(quizzes);
     return (
         <>
             <QuizzesListSectionContainer>

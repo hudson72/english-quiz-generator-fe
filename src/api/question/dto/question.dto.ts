@@ -1,7 +1,7 @@
 export interface QuestionDto {
     id: number;
     questionCategory: string;
-    question: number;
+    question: string;
     a: string;
     b: string;
     c: string;
