@@ -1,5 +1,5 @@
 import React, {Component, createContext, useContext} from "react";
-import createAuth0Client, {Auth0ClientOptions} from "@auth0/auth0-spa-js";
+import createAuth0Client from "@auth0/auth0-spa-js";
 import Auth0Client from "@auth0/auth0-spa-js";
 
 interface ContextValueType {
@@ -19,7 +19,7 @@ export const Auth0Context: any = createContext<ContextValueType | null>(null);
 export const useAuth0: any = () => useContext(Auth0Context);
 
 interface IState {
-    authClient: any,
+    auth0Client: any,
     isLoading: boolean,
     isAuthenticated: boolean,
     user?: any,
@@ -32,7 +32,7 @@ export class Auth0Provider extends Component<{}, IState> {
             isLoading: true,
             isAuthenticated: false,
             user: null,
-            authClient: Auth0Client,
+            auth0Client: Auth0Client,
         };
     }
 
@@ -61,8 +61,27 @@ export class Auth0Provider extends Component<{}, IState> {
         this.setState({isLoading: false, isAuthenticated, user});
     };
 
+    handleRedirectCallback = async () => {
+        this.setState({isLoading: true});
+        await this.state.auth0Client.handleRedirectCallback();
+        const user = await this.state.auth0Client.getUser();
+        this.setState({user, isAuthenticated: true, isLoading: false});
+        window.history.replaceState({}, document.title, window.location.pathname);
+    };
 
     render() {
+        const {auth0Client, isLoading, isAuthenticated, user} = this.state;
+        const {children} = this.props;
+        const configObject = {
+            isLoading,
+            isAuthenticated,
+            user,
+            loginWithRedirect: (...p: any) => auth0Client.loginWithRedirect(...p),
+            getTokenSilently: (...p: any) => auth0Client.getTokenSilently(...p),
+            getTokenClaims: (...p: any) => auth0Client.getTokenClaims(...p),
+            logout: (...p: any) => auth0Client.logout(...p),
+        };
 
+        return <Auth0Context.Provider value={configObject}>{children}</Auth0Context.Provider>;
     }
 }
